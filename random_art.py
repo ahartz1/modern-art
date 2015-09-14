@@ -17,12 +17,15 @@ def create_expression():
     res = []
 
     for n in range(random.randint(1, 5)):
-        res.append(random.choice(['sin', 'cos', 'tan', 'acos']) +
+        res.append(random.choice(['sin', 'cos', 'tan']) +
                    random.choice(['(x) ', '(y) ', '(x + y) ', '(x * y) ']))
         if n%2 == 1:
             res.append('x')
 
-    return lambda x, y: eval('*'.join(res))
+    part1 = '*'.join(res)
+    part2 = 'sin('+part1+')'
+
+    return lambda x, y: eval(part2)
 
 
 
