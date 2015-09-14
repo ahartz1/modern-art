@@ -16,9 +16,11 @@ def create_expression():
 
     res = []
 
-    for _ in range(random.randint(1, 5)):
-        res.append(random.choice(['sin', 'cos', 'tan']) + random.choice(['(x) ', '(y) ', '(x + y) ', '(x * y) ']))
-        res.append('x')
+    for n in range(random.randint(1, 5)):
+        res.append(random.choice(['sin', 'cos', 'tan', 'acos']) +
+                   random.choice(['(x) ', '(y) ', '(x + y) ', '(x * y) ']))
+        if n%2 == 1:
+            res.append('x')
 
     return lambda x, y: eval('*'.join(res))
 
