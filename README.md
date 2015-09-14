@@ -8,6 +8,8 @@
 
 * You will need to have **python&nbsp;3** installed on your machine or have access to a python&nbsp;3 interpreter. See [python's site](https://www.python.org/) for details.
 
+* You will need to make sure that you have a virtual environment running in the folder that you intend to work from.
+
 * You will need to download and install the requirements file (`pip install -r requirements.txt`) in the folder that you intend to work from.
 
 #### Running This Program
