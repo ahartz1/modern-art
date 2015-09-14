@@ -22,7 +22,7 @@ def create_expression():
             res.append('x')
 
     part1 = '*'.join(res)
-    part2 = '(random.gauss(0.68, 0.2))*sin('+part1+')'
+    part2 = '(random.gauss(0.8, 0.162))*sin('+part1+')'
 
     return lambda x, y: eval(part2)
 
