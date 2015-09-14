@@ -14,11 +14,11 @@ def create_expression():
     # expr2 = lambda x, y: (x - y)/2
     # expr3 = lambda x, y: x * y
 
-    res = ''
+    res = []
 
     for _ in range(random.randint(1, 5)):
-        res += random.choice('sin', 'cos', 'tan') + random.choice(['(x)', '(y)', '(x + y)', '(x * y)'])
-        res += x
+        res.append(random.choice(['sin', 'cos', 'tan']) + random.choice(['(x) ', '(y) ', '(x + y) ', '(x * y) ']))
+        res.append('x')
 
     return lambda x, y: eval('*'.join(res))
 
