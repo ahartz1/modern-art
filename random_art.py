@@ -15,7 +15,6 @@ def create_expression():
     # expr3 = lambda x, y: x * y
 
     res = []
-
     for n in range(random.randint(1, 5)):
         res.append(random.choice(['sin', 'cos', 'tan']) +
                    random.choice(['(x) ', '(y) ', '(x + y) ', '(x * y) ']))
@@ -23,7 +22,7 @@ def create_expression():
             res.append('x')
 
     part1 = '*'.join(res)
-    part2 = 'sin('+part1+')'
+    part2 = '(random.gauss(0.68, 0.2))*sin('+part1+')'
 
     return lambda x, y: eval(part2)
 
